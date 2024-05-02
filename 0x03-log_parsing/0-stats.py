@@ -20,8 +20,7 @@ try:
             print(f'File size: {total}')
             for key, value in stat_dic.items():
                 if value != 0:
-                    sol = key + ": " + str(value)
-                    print(sol)
+                    print(f'{int(key)}: {value}')
             i = 0
 except KeyboardInterrupt:
     print(f'File size: {total}')
