@@ -21,7 +21,6 @@ try:
             for key, value in stat_dic.items():
                 if value != 0:
                     print(key, ' : ', value)
-            total = 0
             i = 0
             stat_dic = {
                 '200': 0, '301': 0, '400': 0, '401': 0,
