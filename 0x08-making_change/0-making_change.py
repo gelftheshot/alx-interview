@@ -5,6 +5,7 @@
 """
 from collections import deque
 
+
 def makeChange(coins, total):
     if total <= 0:
         return 0
@@ -24,4 +25,3 @@ def makeChange(coins, total):
                 queue.append((next_total, coin_count + 1))
 
     return -1
-
