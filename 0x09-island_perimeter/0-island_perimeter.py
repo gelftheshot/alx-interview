@@ -18,13 +18,18 @@ def island_perimeter(grid):
             Cells are connected horizontally/vertically (not diagonally).
     """
     p = 0
+    l_col = len(grid)
+    l_row = len(grid[0])
     for i, row in enumerate(grid):
         for j, ele in enumerate(row):
             if ele == 1:
                 p = p + 4
-                if grid[i][j+1] == 1:
-                    p = p - 2
-                if grid[i+1][j] == 1:
-                    p = p - 2
+                if j < l_row - 1:
+                    if grid[i][j+1] == 1:
+                        p = p - 2
+                
+                if i < l_col - 1:
+                    if grid[i+1][j] == 1:
+                        p = p - 2
     return p 
 
