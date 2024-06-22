@@ -65,7 +65,7 @@ def isWinner(x, nums):
     if x <= 0 or not nums:
         return None
 
-    if x >= 10000:
+    if x > 10000:
         return None
 
     maria_wins = 0
@@ -73,7 +73,7 @@ def isWinner(x, nums):
     for n in nums:
         if n <= 0:
             continue
-        if n >= 10000:
+        if n > 10000:
             return None
         if simulate_round(n):
             maria_wins += 1
