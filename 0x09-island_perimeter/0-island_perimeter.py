@@ -8,6 +8,7 @@
         Cells are connected horizontally/vertically (not diagonally).
 """
 
+
 def island_perimeter(grid):
     """
         returns the perimeter of the island described in grid:
@@ -27,9 +28,7 @@ def island_perimeter(grid):
                 if j < l_row - 1:
                     if grid[i][j+1] == 1:
                         p = p - 2
-                
                 if i < l_col - 1:
                     if grid[i+1][j] == 1:
                         p = p - 2
-    return p 
-
+    return p
