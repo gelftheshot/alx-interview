@@ -60,15 +60,25 @@ def isWinner(x, nums):
     nums (list of int): An array where each element represents the set of consecutive integers from 1 to n for each round.
 
     Returns:
-    str: The name of the player who won the most rounds. Returns None if the winner cannot be determined.
+    str: The name of the player who won the most rounds. Returns None if the winner cannot be determined or if input is invalid.
     """
+    if x <= 0 or not nums:
+        return None
+
+    max_num = max(nums)
+    if max_num > 10000:
+        return None
+
     maria_wins = 0
     ben_wins = 0
     for n in nums:
+        if n <= 0:
+            continue
         if simulate_round(n):
             maria_wins += 1
         else:
             ben_wins += 1
+
     if maria_wins > ben_wins:
         return "Maria"
     elif ben_wins > maria_wins:
